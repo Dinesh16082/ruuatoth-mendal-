@@ -1,0 +1,101 @@
+.history-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 2rem 2rem;
+  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f3e8ff 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.history-container h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #ec407a, #641b9a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.history-table thead {
+  background: linear-gradient(to right, #ec407a, #641b9a);
+  color: white;
+}
+
+.history-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  border-bottom: 3px solid #881337;
+}
+
+.history-table tbody tr {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(190, 24, 93, 0.1);
+}
+
+.history-table tbody tr:nth-child(even) {
+  background: rgba(252, 231, 243, 0.3);
+}
+
+.history-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(190, 24, 93, 0.1), rgba(194, 65, 12, 0.1));
+  transform: translateX(5px);
+  box-shadow: -5px 0 15px rgba(190, 24, 93, 0.2);
+}
+
+.history-table td {
+  padding: 1rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-right: 1px solid rgba(190, 24, 93, 0.1);
+}
+
+.history-table td:last-child {
+  border-right: none;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #ec407a;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

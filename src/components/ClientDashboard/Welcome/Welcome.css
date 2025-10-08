@@ -1,0 +1,35 @@
+.back-button-container {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.welcome-back-btn {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.welcome-back-btn:hover {
+  transform: scale(1.1);
+}
+
+.welcome-arrow {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ec407a, #641b9a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-heading {
+  color: #fff !important;
+}

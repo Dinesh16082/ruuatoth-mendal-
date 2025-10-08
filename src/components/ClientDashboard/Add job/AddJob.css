@@ -1,0 +1,91 @@
+.AddJobContainer {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #e91e63;
+  border-radius: 10px;
+  background: #fce4ec;
+  box-shadow: 0 4px 8px rgba(233, 30, 99, 0.1);
+}
+
+.AddJobHeading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #c2185b;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.AddJobInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e91e63;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.AddJobInput:focus {
+  outline: none;
+  border-color: #ec407a;
+  box-shadow: 0 0 8px rgba(236, 64, 122, 0.5);
+}
+
+.AddJobTextarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e91e63;
+  border-radius: 5px;
+  min-height: 80px;
+  font-size: 16px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.AddJobTextarea:focus {
+  outline: none;
+  border-color: #ec407a;
+  box-shadow: 0 0 8px rgba(236, 64, 122, 0.5);
+}
+
+.AddJobButton {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #ec407a, #641b9a);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.AddJobButton:hover {
+  opacity: 0.9;
+}
+
+.AddJobButton:active {
+  background-color: #ad1457;
+}
+
+.BackButton {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #ec407a, #641b9a);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.BackButton:hover {
+  transform: translateY(-p-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

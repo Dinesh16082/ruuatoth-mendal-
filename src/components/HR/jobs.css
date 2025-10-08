@@ -1,0 +1,357 @@
+/* Rose-themed Client History Styling with Animations */
+
+.all-jobs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 2rem 2rem;
+  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f3e8ff 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Back Button Styling */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  color: #4a5568;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Title Styling */
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  animation: slideDown 0.6s ease-out 0.2s both;
+  background: linear-gradient(to right, #ec407a, #641b9a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #ec407a, #641b9a);
+  margin: 1rem auto;
+  border-radius: 2px;
+  animation: expandWidth 0.8s ease-out 0.4s both;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+/* Loading and Error States */
+
+/* Table Container */
+.jobs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  animation: slideUp 0.8s ease-out 0.3s both;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Table Header */
+.jobs-table thead {
+  background: linear-gradient(to right, #ec407a, #641b9a);
+  color: white;
+}
+
+.jobs-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  border-bottom: 3px solid #881337;
+  position: relative;
+}
+
+.jobs-table th::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.jobs-table th:hover::before {
+  width: 100%;
+}
+
+/* Table Body */
+.jobs-table tbody tr {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(190, 24, 93, 0.1);
+}
+
+.jobs-table tbody tr:nth-child(even) {
+  background: rgba(252, 231, 243, 0.3);
+}
+
+.jobs-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(190, 24, 93, 0.1), rgba(194, 65, 12, 0.1));
+  transform: translateX(5px);
+  box-shadow: -5px 0 15px rgba(190, 24, 93, 0.2);
+}
+
+.jobs-table td {
+  padding: 1rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-right: 1px solid rgba(190, 24, 93, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.jobs-table td:last-child {
+  border-right: none;
+}
+
+/* Hover effect for individual cells */
+.jobs-table td:hover {
+  background: rgba(190, 24, 93, 0.05);
+  color: #881337;
+  font-weight: 500;
+}
+
+/* Date column special styling */
+.jobs-table td:first-child {
+  font-weight: 600;
+  background: linear-gradient(to right, #ec407a, #641b9a);
+  background: rgba(190, 24, 93, 0.05);
+}
+
+/* Action column styling */
+.jobs-table td:nth-child(2) {
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #c2410c;
+}
+
+/* Rose decoration for empty state */
+.all-jobs-container p:only-child {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #ec407a, #641b9a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.all-jobs-container p:only-child::before {
+  content: '🌹';
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scrollbar Styling */
+.all-jobs-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.all-jobs-container::-webkit-scrollbar-track {
+  background: rgba(190, 24, 93, 0.1);
+  border-radius: 10px;
+}
+
+.all-jobs-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #be185d, #c2410c);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.all-jobs-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #a21669, #a8371a);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .jobs-table {
+    font-size: 0.9rem;
+  }
+  
+  .jobs-table th,
+  .jobs-table td {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-jobs-container {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .jobs-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .jobs-table thead,
+  .jobs-table tbody,
+  .jobs-table th,
+  .jobs-table td,
+  .jobs-table tr {
+    display: block;
+  }
+  
+  .jobs-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .jobs-table tr {
+    border: 1px solid rgba(190, 24, 93,.2);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .jobs-table td {
+    border: none;
+    border-bottom: 1px solid rgba(190, 24, 93, 0.1);
+    position: relative;
+    padding-left: 50% !important;
+    white-space: normal;
+    text-align: right;
+  }
+  
+  .jobs-table td:before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+    color: #be185d;
+  }
+}
+
+/* Floating Rose Animation */
+@keyframes floatingRose {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(-5deg);
+  }
+}
+
+.all-jobs-container::before {
+  content: '🌹';
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  font-size: 2rem;
+  opacity: 0.3;
+  animation: floatingRose 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+.all-jobs-container::after {
+  content: '🌹';
+  position: fixed;
+  bottom: 10%;
+  left: 5%;
+  font-size: 1.5rem;
+  opacity: 0.2;
+  animation: floatingRose 5s ease-in-out infinite reverse;
+  z-index: -1;
+}

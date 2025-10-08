@@ -1,0 +1,50 @@
+.company-profile h1,
+.company-profile h2,
+.company-profile .card-title,
+.company-profile .info-label,
+.company-profile .info-value,
+.company-profile .stat-label,
+.company-profile .company-name,
+.company-profile .company-tagline,
+.company-profile .loading-text,
+.company-profile .error-text,
+.company-profile .empty-text,
+.company-profile .retry-button,
+.company-profile .back-button,
+.company-profile .link,
+.company-profile .highlight-badge,
+.company-profile .badge,
+.company-profile .stat-value {
+  background: linear-gradient(to right, #ec5487, #915fb8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback for browsers that don't support background-clip */
+}
+
+.company-profile .retry-button,
+.company-profile .back-button {
+    -webkit-text-fill-color: white;
+    color: white;
+}
+
+.company-profile .retry-button:hover,
+.company-profile .back-button:hover,
+.company-profile .link:hover {
+  background: linear-gradient(to right, #915fb8, #ec5487);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.company-profile .retry-button:hover,
+.company-profile .back-button:hover {
+    -webkit-text-fill-color: white;
+    color: white;
+}
+
+.company-profile .card-icon {
+  -webkit-text-fill-color: initial;
+  color: initial;
+}

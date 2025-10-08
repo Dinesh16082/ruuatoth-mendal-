@@ -1,0 +1,111 @@
+body {
+  background: linear-gradient(to right, #ec5487, #915fb8);
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.edit-button {
+  background: linear-gradient(45deg, #16a34a, #15803d);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 1rem;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+  transition: all 0.3s ease;
+}
+
+.edit-button:hover {
+  background: linear-gradient(45deg, #15803d, #166534);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.4);
+}
+
+/* Edit Form */
+.edit-profile-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.822);
+  border-radius: 15px;
+  box-shadow:  linear-gradient(to right, #ec407a, #641b9a);
+}
+
+.edit-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #ec407a, #54217a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.3rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(236, 64, 122, 0.5);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.save-button {
+  background: linear-gradient(to right, #ec407a, #641b9a);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.save-button:hover {
+  background: linear-gradient(to right, #ec407a, #641b9a);
+}
+
+.cancel-button {
+  background: #dc2626;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cancel-button:hover {
+  background: #b91c1c;
+}
+
+.back-button-edit {
+  background: linear-gradient(to right, #ec5487, #915fb8);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+  transition: all 0.3s ease;
+}
+
+.back-button-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.4);
+}

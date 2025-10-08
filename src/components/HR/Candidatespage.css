@@ -1,0 +1,105 @@
+/* Container for Form Page */
+.form-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5; /* Neutral background instead of gradient */
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form Box */
+.form-box {
+  width: 520px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Form Title */
+.form-box .title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #333; /* Dark text instead of pink */
+}
+
+/* Photo Upload Section */
+.photo-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.candidate-photo {
+  height: 120px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.photo-placeholder {
+  height: 120px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  color: #aaa;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+  font-size: 0.9rem;
+}
+
+/* Input Fields */
+.form-box input,
+.form-box select,
+.form-box textarea {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-box input:focus,
+.form-box select:focus,
+.form-box textarea:focus {
+  outline: none;
+  border-color: #333; /* Dark focus instead of pink */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Labels */
+.form-box label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+/* Submit Button */
+.form-box .submit-button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background: #333; /* Dark button instead of pink */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.form-box .submit-button:hover {
+  background: #555; /* Slightly lighter on hover */
+}

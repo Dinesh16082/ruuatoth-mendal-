@@ -1,0 +1,84 @@
+/* Fullscreen container with gradient */
+.landing-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #7c3aed, #ec4899, #ef4444);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Gradient-text heading */
+.landing-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #7c3aed, #ec4899, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 3rem;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Button group */
+.landing-buttons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Button base style */
+.landing-button {
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover animation */
+.landing-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Individual button colors */
+.landing-button.candidate {
+  background-color: #7c3aed;
+}
+
+.landing-button.client {
+  background-color: #ec4899;
+}
+
+/* Responsive text scaling */
+@media (max-width: 600px) {
+  .landing-title {
+    font-size: 2.2rem;
+  }
+
+  .landing-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

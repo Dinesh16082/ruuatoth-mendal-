@@ -1,0 +1,132 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #e54fde, #4361ee);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Animated floating shapes */
+.animatedShape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape1 {
+  width: 120px;
+  height: 120px;
+  background-color: #ffb3ec;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.shape2 {
+  width: 100px;
+  height: 100px;
+  background-color: #ffd6e0;
+  bottom: 20%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.shape3 {
+  width: 80px;
+  height: 80px;
+  background-color: #ffedf3;
+  top: 60%;
+  left: 70%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Top-left decorative */
+.decorTopLeft {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: 50px;
+  background-color: #fa5f63;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 40px;
+}
+
+.decorDot {
+  position: absolute;
+  top: 35px;
+  left: 100px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Left big circle */
+.leftCircle {
+  width: 350px;
+  height: 350px;
+  background-color: #fbeaec;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.circleInner {
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+}
+
+.teamPlaceholder {
+  font-size: 1rem;
+  font-style: italic;
+  color: #888;
+}
+
+/* Right content */
+.rightContent {
+  max-width: 500px;
+  color: white;
+  z-index: 2;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Bottom right rounded shape */
+.bottomRightShape {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background-color: #fdbb2d;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  z-index: 1;
+}

@@ -1,0 +1,31 @@
+.navbar {
+  background: #ffffff;
+  color: black;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+li {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+li:hover {
+    background: linear-gradient(to right, #ec5487, #915fb8);
+
+  color: white;
+}

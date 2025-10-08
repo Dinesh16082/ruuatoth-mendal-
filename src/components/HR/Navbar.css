@@ -1,0 +1,86 @@
+.hr-header {
+  background: rgba(236, 64, 122, 0.8);
+  backdrop-filter: blur(10px);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hr-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 56px;
+}
+
+.hr-logo-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.6rem;
+}
+
+.hr-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.hr-title,
+.glowing-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(90deg, #f8bbd0, #fce4ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.glowing-title {
+  animation: glowAnimation 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes glowAnimation {
+  from {
+    text-shadow: 0 0 10px #fce4ec, 0 0 20px #f8bbd0, 0 0 30px #f48fb1;
+  }
+  to {
+    text-shadow: 0 0 20px #fce4ec, 0 0 30px #f8bbd0, 0 0 40px #f48fb1;
+  }
+}
+
+.hr-title:hover,
+.glowing-title:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 25px #fce4ec, 0 0 35px #f8bbd0;
+}
+
+.hr-nav-list {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  align-items: center;
+  list-style: none;
+}
+
+.hr-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.hr-nav-link:hover {
+  color: #f8bbd0;
+  transform: translateY(-2px);
+}
